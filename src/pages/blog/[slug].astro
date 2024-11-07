@@ -16,7 +16,7 @@ const { blog } = Astro.props;
 const { Content } = await blog.render();
 ---
 <Layout title={blog.data.title}>
-  <div class="mx-auto max-w-4xl space-y-16">
+  <div transition:name={blog.id} class="mx-auto max-w-4xl space-y-16">
     <div class="space-y-8">
       <p class="font-mono font-light text-sm text-neutral-500">{blog.data.tags[0]}</p>
       <h1 class="font-medium text-6xl">{blog.data.title}</h1>
