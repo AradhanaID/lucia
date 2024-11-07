@@ -1,7 +1,8 @@
 ---
 title: "Astro and SEO: Boosting Your Blog’s Performance"
-date: 2024-09-24
-author: ChatGPT
+createdDate: 2024-09-24
+tags: ["Astro", "React", "SEO"]
+author: Aradhana Indra Daniswara
 ---
 
 In the digital age, having a blog that stands out is more important than ever. One of the key elements to achieving this is ensuring your blog is optimized for search engines. Astro, a modern static site generator, has proven to be an excellent tool for boosting SEO and improving overall blog performance. In this article, we will explore how Astro can enhance your blog’s SEO and performance.

@@ -7,7 +7,8 @@ import nextjsLogo from "@images/nextjs.svg";
 import astroLogo from "@images/astro.svg";
 import remixLogo from "@images/remix.svg";
 import { getCollection } from "astro:content";
-const allBlogPosts = await getCollection('blog');
+import Card from "@components/Card.astro";
+const blogPosts = await getCollection("blog");
 ---
 
 <Layout title="Lucia">
@@ -35,6 +36,12 @@ const allBlogPosts = await getCollection('blog');
           <Image src={remixLogo} alt={"Remix"} />
           <p class="text-xl">Remix</p>
         </div>
+      </div>
+    </div>
+    <div class="space-y-8">
+      <h2 class="text-3xl text-center">Blogs</h2>
+      <div class="grid grid-cols-3 gap-8">
+        {blogPosts.map((blog) => <Card blog={blog} />)}
       </div>
     </div>
   </div>

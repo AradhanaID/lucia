@@ -1,7 +1,8 @@
 ---
 title: Understanding the Virtual DOM in ReactJS
-date: 2024-09-24
-author: ChatGPT
+createdDate: 2024-09-24
+tags: ["React", "SEO"]
+author: Aradhana Indra Daniswara
 ---
 
 # Understanding the Virtual DOM in ReactJS

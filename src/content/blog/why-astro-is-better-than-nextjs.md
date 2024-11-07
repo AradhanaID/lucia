@@ -1,7 +1,8 @@
 ---
 title: Why Astro is Significantly Better than Next.js for Blogs
-date: 2024-09-24
-author: ChatGPT
+createdDate: 2024-09-24
+tags: ["React", "Astro", "NextJS"]
+author: Aradhana Indra Daniswara
 ---
 
 When it comes to building modern web applications, developers are often torn between choosing the right framework. For blogs, two popular choices are Astro and Next.js. While both are powerful tools, Astro has emerged as a superior option for blogs. Let's dive into the reasons why Astro outshines Next.js in this specific use case.
