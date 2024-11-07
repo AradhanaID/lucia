@@ -1,0 +1,29 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { formatDate } from "@lib/utils";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const blogs = await getCollection("blog");
+  return blogs.map((blog) => ({
+    params: { slug: blog.slug },
+    props: { blog },
+  }));
+}
+
+const { blog } = Astro.props;
+const { Content } = await blog.render();
+---
+<Layout title={blog.data.title}>
+  <link rel="stylesheet" href="/styles/markdown.css" />
+  <div class="mx-auto max-w-4xl space-y-16">
+    <div class="space-y-8">
+      <p class="font-mono font-light text-sm text-neutral-500">{blog.data.tags[0]}</p>
+      <h1 class="font-medium text-6xl">{blog.data.title}</h1>
+      <p class="font-mono text-neutral-500">{blog.data.author} • {formatDate(blog.data.createdDate)}</p>
+    </div>
+    <div class="leading-loose">
+      <Content />
+    </div>
+  </div>
+</Layout>
